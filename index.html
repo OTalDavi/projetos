@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu Git</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <div class="items">
+                <a href="index.html"><img class="logo" src="img/logs.png" alt="Logo"></a>
+                <div class="links">
+                    <a href="#git">Git</a>
+                    <a href="#hub">GitHub</a>
+                    <a href="#cmd">Comandos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <a class="hero"><img src="img/guia2.png" alt=""></a>
+    <h1 class="h1">Guia dos Gits: O que são e utilidades </h1>
+    <div class="content2" id="git">
+        <h1>O que é o Git?</h1>
+        <p class="text">Git é um sistema de controle de versão distribuído usado para rastrear alterações em arquivos de
+            código-fonte. Ele permite criar "snapshots" (commits) do projeto, navegar no histórico, trabalhar com
+            branches e colaborar sem perder versões anteriores. Foi criado por Linus Torvalds em 2005 e desde então se
+            tornou o padrão da indústria. Sua principal vantagem é a confiabilidade e flexibilidade para projetos de
+            qualquer porte, do pessoal ao corporativo.</p>
+    </div>
+    <div class="content2" id="hub">
+        <h1>O que é o GitHub?</h1>
+        <p class="text">GitHub é uma plataforma online que hospeda repositórios Git. Além de armazenamento remoto
+            (remoção/backup), oferece interface web, pull requests (revisões), issues (rastreamento), Actions (CI/CD) e
+            ferramentas de colaboração. Ele é muito usado para projetos open source e privados, permitindo que
+            desenvolvedores trabalhem em equipe de forma organizada e segura. O GitHub também integra recursos sociais,
+            como perfis, estrelas e forks, tornando-se uma rede para desenvolvedores.</p>
+    </div>
+    <div class="content2">
+        <h1>Diferenças entre Git e GitHub</h1>
+        <p class="text"><strong>Git:</strong> ferramenta local (controle de versão). Você pode usá-lo totalmente offline
+            e ainda assim ter todo o histórico do projeto. É a tecnologia que controla o versionamento.<br><br>
+            <strong>GitHub:</strong> serviço na nuvem que hospeda repositórios Git e fornece funcionalidades
+            colaborativas. Ele facilita compartilhar seu código, colaborar com outros desenvolvedores e manter a gestão
+            do projeto de forma centralizada.
+        </p>
+    </div>
+
+    <div class="two-col">
+
+        <div class="left-col">
+            <div class="content">
+                <h1><strong>Como criar um repositorio GitHub</strong></h1><br>
+                <p>Aprenda como criar um repositório</p> <br>
+                <ul>
+                    <p class="sub1">Acesse <a
+                            href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"
+                            target="_blank">New repository</a></p>
+                    <p class="sub1">Defina Repository name, escolha Public e, se quiser, marque Add a README file.</p>
+                    <p class="sub1">Clique em Create repository.</p>
+                </ul>
+            </div>
+
+            <div class="content" >
+                <h1> Comandos Linux presentes no README do repositório </h1>
+                <p class="sub1"> cd nome_da_pasta</p>
+                <p class="sub1"> ls nome_da_pasta</p>
+                <p class="sub1"> mkdir nome_da_pasta</p>
+                <p class="sub1"> rm -r nome_da_pasta</p>
+                <p class="sub1"> mv nome_atual_do_arquivo nome_novo_do_arquivo </p>
+                <p class="sub1"> mv nome_do_arquivo caminho_da_pasta/</p>
+                <p class="sub1"> cp nome_do_arquivo caminho_da_pasta_de_destino/</p>
+            </div>
+            <div class="content">
+                <h1>
+                    Como ligar um projeto existente na máquina a um repositório remote
+                </h1>
+                <h4># dentro da pasta do projeto</h4>
+                <p class="sub1">
+                    git init </p>
+                <p class="sub1">git add</p>
+                <p class="sub1">git commit -m "Primeiro commit"</p>
+                <p class="sub1"># adicionar repositório remoto</p>
+                <p class="sub1">git remote add origin https://github.com/usuario/repositorio.git></p>
+                <p class="sub1"># enviar para o GitHub</p>
+                <p class="sub1">git push -u origin main</p>
+                <p class="tao">Se a branch principal do repositório remoto for <a class="sub2">main</a> ou <a
+                        class="sub2">master</a>, ajuste o comando accordingly. Se o repositório remoto já existir e
+                    tiver commits, use git pull --rebase origin main antes de push para evitar conflitos. Esse processo
+                    conecta sua base de código local com o servidor do GitHub, possibilitando colaboração online. </p>
+
+
+            </div>
+        </div>
+
+
+        <div class="right-col">
+            <div class="content" id="cmd" >
+                <h1><strong>Comandos básicos do terminal Linux:</strong></h1><br>
+                <p> Comandos basicos que utilizamos durante as aulas no GitBash durante as aulas de P.A.W</p>
+                <p class="sub1">pwd # caminho atual</p>
+                <p class="sub1">ls # lista arquivos</p>
+                <p class="sub1">ls -la # lista detalhado, inclusive ocultos</p>
+                <p class="sub1">cd &lt;pasta&gt; # entrar em pasta</p>
+                <p class="sub1">cd .. # voltar um nível</p>
+                <p class="sub1">mkdir &lt;pasta&gt; # criar pasta</p>
+                <p class="sub1">rm -r &lt;pasta&gt; # remover pasta recursivamente</p>
+                <p class="sub1">rm &lt;arquivo&gt; # remover arquivo</p>
+                <p class="sub1">cp &lt;arq&gt; &lt;destino&gt; # copiar arquivo</p>
+                <p class="sub1">mv &lt;de&gt; &lt;para&gt; # mover/renomear</p>
+            </div>
+            <div class="content">
+                <h1>Como gerar uma versão com Git (commit)</h1>
+                Veja o que mudou:<br><br>
+                <code class="sub1">git status</code><br><br>
+                Selecione os arquivos para a versão:<br><br>
+                <code class="sub1">git add arquivo1.css arquivo2.html
+                # ou tudo
+                git add . </code><br><br>
+                Crie o commit com mensagem:<br><br>
+                <code class="sub1">git commit -m "mensagem clara do que mudou"</code>
+
+            </div>
+            <div class="content">
+                <h1>Como gerar uma versão com Git</h1>
+                <p>No Git, "gerar uma versão" normalmente significa criar um commit — um snapshot do estado do código.
+                    Para
+                    versões formais também é comum usar tags. Essa prática permite identificar pontos estáveis no
+                    histórico
+                    do projeto, facilitando a distribuição de releases e correções.</p>
+
+                <p class="sub1"> add git</p>
+                <p class="sub1">git commit -m "Descrição das alterações"</p>
+                <p class="sub1">git tag -a v1.0.0 -m "Versão 1.0.0"</p>
+                <p class="sub1"># enviar tags para o remoto</p>
+                <p class="sub3" >git push origin --tags</p>
+            </div>
+
+        </div>
+       
+
+
+    </div> <div class="content2">
+           <h1>Como enviar do seu computador para o GitHub</h1>
+            # depois de configurar remote e comits feitos
+            <p class="sub1">git push origin main</p>
+
+            <p># se for a primeira vez (ou quiser criar upstream)</p>
+            <p class="sub1">gitgit push -u origin main</p>
+            Se o repositório remoto pedir autenticação, use token de acesso pessoal (PAT) em vez de senha, ou configure
+            SSH keys para evitar digitar credenciais sempre. Esse envio garante que seu trabalho local fique disponível
+            na nuvem, permitindo colaboração e backup seguro.
+        </div>
+    <footer>
+        <h1> Davi Salvador Schubert</h1>
+        <h2>1°INFO</h2>
+    </footer>
+</body>
+
+</html>
